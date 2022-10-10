@@ -1,0 +1,21 @@
+iga kord kui kasutaja lehele läheb kontrollib kas tal on auth. token.
+
+kui on login või reg leht ss ei kontrolli kas on sisse logitud.
+
+tahame leida mis kasutajale auth. token kuulub.
+	panen user objecti kuhugi muutujasse kirja nii et seda saaks kontrolleris 
+	kasutada.
+
+token on rndm str, mida on raske järgi teha, on pikk nt 64 tähemärki.
+	alphanumerical URLi kaudu saatmiseks.
+	crypto lib abil teeme neid
+
+loginis teeme uue sessiooni mis seob random tokeni ja useri, 
+	lisaks createdAt, ip, userAgent
+	salvestame sessiooni andmebaasi
+
+TODO:
+create middleware
+login, otsime üles kasutajate ja parooli
+session expire - max 30 päeva
+konto loomine, pw encryption
