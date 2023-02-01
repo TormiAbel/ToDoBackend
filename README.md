@@ -5,6 +5,6 @@
 ### Commands to run project
     
     ```bash
-        npm start
+        node .
     ```
     
